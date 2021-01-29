@@ -1,0 +1,154 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* colors */
+  --clr-Red: hsl(0, 78%, 62%);
+  --clr-Cyan: hsl(180, 62%, 55%);
+  --clr-Orange: hsl(34, 97%, 64%);
+  --clr-Blue: hsl(212, 86%, 64%);
+
+  --clr-Very-Dark-Blue: hsl(234, 12%, 34%);
+  --clr-Grayish-Blue: hsl(229, 6%, 66%);
+  --clr-Very-Light-Gray: hsl(0, 0%, 98%);
+
+  /* Fonts */
+  --ff-primary: "Poppins", sans-serif;
+
+  /* Shadows */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-Very-Light-Gray);
+  color: #111;
+  font-size: 15px;
+  padding: 1.2rem 0;
+  min-height: 100vh;
+}
+h1 {
+  font-weight: 200;
+  font-size: 1.4rem;
+  color: var(--clr-Grayish-Blue);
+}
+h2 {
+  color: var(--clr-Very-Dark-Blue);
+}
+p {
+  color: var(--clr-Grayish-Blue);
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Main Styles */
+
+/* header */
+.main {
+  padding: 4rem 0;
+  text-align: center;
+  width: 85vw;
+  max-width: 1440px;
+  margin: 0 auto 6rem auto;
+}
+.main-header {
+  margin-bottom: 4rem;
+}
+.main-header h2 {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+/* media queries */
+
+@media screen and (min-width: 776px) {
+  .main-header h1,
+  h2 {
+    font-size: 2.2rem;
+  }
+  .main-header p {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Cards */
+
+.card {
+  box-shadow: var(--light-shadow);
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  border-top: var(--clr-Cyan) solid 4px;
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 320px;
+  height: 220px;
+}
+.card h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+.card p {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.img-box {
+  align-self: flex-end;
+}
+.card img {
+  width: 64px;
+}
+
+.card:nth-child(2) {
+  border-top: var(--clr-Red) solid 4px;
+}
+.card:nth-child(3) {
+  border-top: var(--clr-Orange) solid 4px;
+}
+.card:last-child {
+  border-top: var(--clr-Blue) solid 4px;
+}
+/* media queries */
+
+@media screen and (min-width: 1100px) {
+  .cards {
+    position: relative;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card:first-child {
+    position: absolute;
+    transform: translate(0%, 50%);
+    margin-left: 2.5rem;
+  }
+  .card:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0%, 50%);
+    margin-right: 2.5rem;
+  }
+}
